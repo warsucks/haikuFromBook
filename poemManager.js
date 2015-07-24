@@ -5,7 +5,7 @@ function writePoemInFile(poem)
 {
 	var poem = joyce.writePoem([5,7,5]);
 	poem = poem.replace(/\n/g,"<br>");
-	fs.writeFileSync("poem.html",poem);
+	fs.writeFileSync("views/poem.html",poem);
 }
 
 module.exports.writePoemInFile = writePoemInFile;

@@ -9,9 +9,9 @@ http.createServer(function (request, response)
 	{
 		poemManager.writePoemInFile();
 		response.writeHead(200,{'Content-Type': 'text/html'});
-		renderer.view("header", response);
-		renderer.view("poem",response);
-		renderer.view("footer",response);
+		renderer.view("views/header", response);
+		renderer.view("views/poem",response);
+		renderer.view("views/footer",response);
 	}
 	response.end();
 
