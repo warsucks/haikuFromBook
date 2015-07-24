@@ -5,7 +5,7 @@ var poemManager = require('./poemManager');
 
 http.createServer(function (request, response)
 {
-	if((request.url==="/haiku" && request.method.toLowerCase()==="get") || request.method.toLowerCase()==="post")
+	if((request.url==="/" && request.method.toLowerCase()==="get") || request.method.toLowerCase()==="post")
 	{
 		poemManager.writePoemInFile();
 		response.writeHead(200,{'Content-Type': 'text/html'});
